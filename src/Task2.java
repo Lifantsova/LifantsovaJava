@@ -2,14 +2,18 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
+        String nameTemplate = "Вячеслав";
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Введите имя: ");
 
-        String s = scanner.next();
+        String name = scanner.next();
 
-        if (s.equals("Вячеслав")) {
-            System.out.println("Привет, Вячеслав!");
+        greeting(name, nameTemplate);
+    }
+
+    private static void greeting(String s, String nameTemplate) {
+        if (s.equals(nameTemplate)) {
+            System.out.println("Привет, " + nameTemplate + "!");
         } else {
             System.out.println("Нет такого имени");
         }
